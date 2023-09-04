@@ -1,0 +1,62 @@
+@import '../utils/vars';
+
+.toggle {
+  &__option {
+    padding: 15px;
+    color:$highlight-color;
+    opacity: 60%;
+  }
+
+  &__switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+  }
+
+  &__switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $primary-color;
+    -webkit-transition: 0.4s;
+
+    transform: translate(0px, 0px);
+    transition: 0.6s ease transform, 0.6s box-shadow;
+
+    border-radius: 34px;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 24px;
+      width: 24px;
+      left: 6px;
+      bottom: 3px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+
+      border-radius: 50%;
+    }
+  }
+}
+
+input:checked + .toggle__slider {
+  background-color: $secondary-color;
+}
+
+input:checked + .toggle__slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}

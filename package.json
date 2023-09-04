@@ -1,0 +1,15 @@
+{ 
+  "scripts": {
+    "start": "concurrently \"npm:compile-sass\" \"npm:serve\"",
+    "compile-sass": "node-sass --watch src/styles/main.scss src/main.css",
+    "serve": "live-server --entry-file=src/index.html"
+  },
+  "dependencies": {
+    "sass": "^1.66.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "live-server": "^1.2.2",
+    "node-sass": "^9.0.0"
+  }
+}

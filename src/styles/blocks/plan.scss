@@ -1,0 +1,235 @@
+@import '../utils/vars';
+@import '../utils/mixins';
+
+.plan {
+  margin: 0 auto 20px;
+
+  text-align: center;
+  background-color: $highlight-color;
+  border-radius: 8px;
+  cursor: pointer;
+  
+  @include hover(transform, scale(1.05));
+
+  &--main {
+    position: relative;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -.5rem;
+      z-index: -1;
+      background: linear-gradient(
+        0deg,
+        $color-3,
+        $color-4,
+        $color-5,
+      );
+      border-radius: inherit;
+    }
+
+    &::after {
+      filter: blur(1.5rem);
+    }
+  }
+
+  @include onTablet {
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  @include onDesktop {
+    max-width: 280px;
+  }
+
+  &__content {
+    background-color: $highlight-color;
+    border-radius: inherit;
+  }
+
+  &__top {
+    padding: 25px;
+    margin-bottom: 20px;
+
+    background-color: $primary-color;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+
+    color: $highlight-color;
+
+    @include onTablet {
+      padding: 25px 10px;
+    }
+
+    @include onDesktop {
+      padding: 50px 10px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    margin-bottom: 15px;
+
+    @include onTablet {
+      font-size: 25px;
+    }
+
+    @include onDesktop {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__description {
+    opacity: 85%;
+
+    @include onTablet {
+      font-size: 14px;
+    }
+
+    @include onDesktop {
+      font-size: 16px;
+    }
+  }
+
+  &__price {
+    position: relative;
+    margin-bottom: 40px;
+    font-size: 20px;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 1px;
+      width: 80%;
+      background-color: $secondary-color;
+      opacity: 30%;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__price-wrap {
+    display: flex;
+    justify-content: center;
+
+    color: $secondary-color;
+    align-items: baseline;
+
+    @include onTablet {
+      min-width: 200px;
+    }
+  }
+
+  &__price-value {
+    font-size: 40px;
+    font-weight: 400;
+
+    @include onTablet {
+      font-size: 30px;
+    }
+
+    @include onDesktop {
+      font-size: 42px;
+    }
+  }
+
+  &__price-periodicity {
+    opacity: 50%;
+    font-size: 15px;
+
+    @include onTablet {
+      font-size: 12px;
+    }
+
+    @include onDesktop {
+      font-size: 16px;
+    }
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    width: 80%;
+    margin: 0 auto 20px;
+    margin-bottom: 20px;
+  }
+
+  &__features-item {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: $secondary-color; 
+
+    @include onDesktop {
+      margin-bottom: 15px;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      top: 0;
+      left: 0;
+      background-image: url("images/cross.png");
+      background-size: cover;
+    }
+
+    &--available {
+      &:before {
+        background-image: url("images/check-mark.png");
+      }
+    }
+
+    @include onDesktop {
+      padding-left: 40px;
+      font-size: 14px;
+
+      &:before {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &__button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+
+    font-size: 18px;
+    color: $background;
+    border: 2px solid $background;
+    border-radius: 5px;
+
+    @include onTablet {
+      padding: 7px 14px;
+      font-size: 14px;
+    }
+
+    @include onDesktop {
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+
+    @include hover(border-color, transparent);
+    @include hover(background-color, $background);
+    @include hover(color, $highlight-color);
+
+    @include focus(border-color, transparent);
+    @include focus(background-color, $background);
+    @include focus(color, $highlight-color);
+    @include focus(transform, scale(1.1));
+  }
+}

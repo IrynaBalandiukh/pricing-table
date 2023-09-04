@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pricing</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./main.css">
+        <link rel="icon" href="images/logo.svg">
+        <script src="scripts/main.js" defer></script>
+    </head>
+    <body class="page">
+        <main class="pricing-table">
+          <section class="pricing-table__container">
+              <div class="pricing-table__top">
+                <h1 class="pricing-table__title">Plans & Pricing</h1>
+                <div class="toggle">
+                    <span class="toggle__option">Annually</span>
+                    <label for="checbox" class="toggle__switch">
+                        <input type="checkbox" id="checbox" onclick="check()" />
+                        <span class="toggle__slider"></span>
+                    </label>
+                    <span class="toggle__option">Monthly</span>
+                </div>
+              </div>
+
+              <div class="pricing-table__content">
+                <article class="plan">
+                  <div class="plan__top">
+                    <h2 class="plan__title">Basic</h2>
+                    <p class="plan__description">Best for personal use</p>
+                  </div>
+                  <div class="plan__price">
+                    <div class="plan__price--monthly">
+                      <div class="plan__price-wrap">
+                        <h3 class="plan__price-value">
+                          &dollar;4.99
+                        </h3>
+                        <span class="plan__price-periodicity">/monthly</span>
+                      </div>
+                    </div>
+
+                    <div class="plan__price--annualy">
+                      <div class="plan__price-wrap">
+                        <h3 class="plan__price-value">
+                          &dollar;49.99
+                        </h3>
+                        <span class="plan__price-periodicity">/yearly</span>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="plan__features">
+                    <li class="plan__features-item plan__features-item--available">
+                      2000 Subscribers
+                    </li>
+                    <li class="plan__features-item">12k Emails/month</li>
+                    <li class="plan__features-item">Multi-User Accounts</li>
+                    <li class="plan__features-item">Email Support</li>
+                  </ul>
+                  <a href="#popup1">
+                    <button class="plan__button">
+                      Get Started
+                    </button>
+                  </a>
+                </article>
+
+                <article class="plan plan--main">
+                  <div class="plan__content">
+                    <div class="plan__top">
+                      <h2 class="plan__title">Standart</h2>
+                      <p class="plan__description">Best for small teams</p>
+                    </div>
+                    <div class="plan__price">
+                      <div class="plan__price--monthly">
+                        <div class="plan__price-wrap">
+                          <h3 class="plan__price-value">
+                            &dollar;9.99
+                          </h3>
+                          <span class="plan__price-periodicity">/monthly</span>
+                        </div>
+                      </div>
+
+                      <div class="plan__price--annualy">
+                        <div class="plan__price-wrap">
+                          <h3 class="plan__price-value">
+                            &dollar;119.99
+                          </h3>
+                          <span class="plan__price-periodicity">/yearly</span>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="plan__features">
+                      <li class="plan__features-item plan__features-item--available">
+                        2000 Subscribers
+                      </li>
+                      <li class="plan__features-item plan__features-item--available">12k Emails/month</li>
+                      <li class="plan__features-item">Multi-User Accounts</li>
+                      <li class="plan__features-item">Email Support</li>
+                    </ul>
+                    
+                    <a href="#popup1">
+                      <button class="plan__button">
+                        Get Started
+                      </button>
+                    </a>
+                  </div>
+                </article>
+
+                <article class="plan">
+                  <div class="plan__top">
+                    <h2 class="plan__title">Premium</h2>
+                    <p class="plan__description">Best for mid-sized teams</p>
+                  </div>
+                  <div class="plan__price">
+                    <div class="plan__price--monthly">
+                      <div class="plan__price-wrap">
+                        <h3 class="plan__price-value">
+                          &dollar;14.99
+                        </h3>
+                        <span class="plan__price-periodicity">/monthly</span>
+                      </div>
+                    </div>
+
+                    <div class="plan__price--annualy">
+                      <div class="plan__price-wrap">
+                        <h3 class="plan__price-value">
+                          &dollar;159.99
+                        </h3>
+                        <span class="plan__price-periodicity">/yearly</span>
+                      </div>
+                    </div>
+                  </div>
+                  <ul class="plan__features">
+                    <li class="plan__features-item plan__features-item--available">
+                      2000 Subscribers
+                    </li>
+                    <li class="plan__features-item plan__features-item--available">12k Emails/month</li>
+                    <li class="plan__features-item plan__features-item--available">Multi-User Accounts</li>
+                    <li class="plan__features-item plan__features-item--available">Email Support</li>
+                  </ul>
+                  <a href="#popup1">
+                    <button class="plan__button">
+                      Get Started
+                    </button>
+                  </a>
+                </article>
+              </div>
+            </section>
+
+          <div id="popup1" class="popup">
+            <div class="popup__wrapper">
+              <div class="popup__header">
+                <p class="popup__close"><a href="#" class="popup__close-link">Close</a></p>
+                <h2 class="popup__title">SUBSCRIBE NOW</h2>
+              </div>
+              <div class="popup__content">
+                <p class="popup__label">Email</p>
+                <input type="email" id="email" placeholder="example@gmail.com" class="popup__input">
+                <p class="popup__label">Password</p>
+                <input type="password" id="email" placeholder="●●●●●●●●" class="popup__input">
+                <button class="popup__button popup__button--login">Log In</button>
+                <button class="popup__button popup__button--signup">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </main>
+    </body>
+</html>
