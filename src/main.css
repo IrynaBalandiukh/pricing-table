@@ -33,45 +33,45 @@ button {
 .page {
   background-color: #2b4d38; }
 
-.toggle__option {
-  padding: 15px;
-  color: #fff;
-  opacity: 60%; }
-
-.toggle__switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 30px; }
-
-.toggle__switch input {
-  opacity: 0;
-  width: 0;
-  height: 0; }
-
-.toggle__slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #3a9973;
-  -webkit-transition: 0.4s;
-  transform: translate(0px, 0px);
-  transition: 0.6s ease transform, 0.6s box-shadow;
-  border-radius: 34px; }
-  .toggle__slider:before {
+.toggle {
+  display: flex;
+  align-items: center; }
+  .toggle__option {
+    padding: 15px;
+    color: #fff;
+    opacity: 60%; }
+  .toggle__switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px; }
+  .toggle__switch input {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+  .toggle__slider {
     position: absolute;
-    content: "";
-    height: 24px;
-    width: 24px;
-    left: 6px;
-    bottom: 3px;
-    background-color: white;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #3a9973;
     -webkit-transition: 0.4s;
-    transition: 0.4s;
-    border-radius: 50%; }
+    transform: translate(0px, 0px);
+    transition: 0.6s ease transform, 0.6s box-shadow;
+    border-radius: 34px; }
+    .toggle__slider:before {
+      position: absolute;
+      content: "";
+      height: 24px;
+      width: 24px;
+      left: 6px;
+      bottom: 3px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      border-radius: 50%; }
 
 input:checked + .toggle__slider {
   background-color: #4d5355; }
@@ -152,7 +152,7 @@ input:checked + .toggle__slider:before {
         padding: 50px 10px;
         margin-bottom: 30px; } }
   .plan__title {
-    font-size: 30px;
+    font-size: 28px;
     margin-bottom: 15px; }
     @media (min-width: 744px) {
       .plan__title {
@@ -193,7 +193,7 @@ input:checked + .toggle__slider:before {
       .plan__price-wrap {
         min-width: 200px; } }
   .plan__price-value {
-    font-size: 40px;
+    font-size: 34px;
     font-weight: 400; }
     @media (min-width: 744px) {
       .plan__price-value {
